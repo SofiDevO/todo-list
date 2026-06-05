@@ -11,7 +11,8 @@ export default defineConfig({
     host: true,
     port: 5173,
     allowedHosts: [
-      'todo.sofidev.site'
-    ]
+      'todo.sofidev.site',
+      'https://todo.sofidev.site',
+    ],
   },
 });
