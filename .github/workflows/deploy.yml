@@ -12,11 +12,14 @@ jobs:
     steps:
       - name: Login in to VPS
         uses: appleboy/ssh-action@v1.0.0
+        env:
+          VPS_PASSWORD: ${{ secrets.VPS_PASSWORD }}
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USERNAME }}
           password: ${{ secrets.VPS_PASSWORD }}
+          envs: VPS_PASSWORD
           script: |
             cd ~/todo-list
             git pull origin main
-            sudo docker compose up -d --build
+            echo "$VPS_PASSWORD" | sudo -S docker compose up -d --build
