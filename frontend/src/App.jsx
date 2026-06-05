@@ -165,7 +165,7 @@ export default function App() {
           Todo App
         </div>
         <h1 className="text-4xl font-bold text-white tracking-tight mb-2">
-          ❤️ Todo List ❤️
+          ❤️ Todo List By sofidev❤️
         </h1>
         <p className="text-white/40 text-sm">
           {loading ? 'Cargando…' : `${pending} pendiente${pending !== 1 ? 's' : ''} · ${done} completada${done !== 1 ? 's' : ''}`}
